@@ -1,0 +1,90 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  margin: 2rem;
+  background: #0d0c1d;
+  color: #effffa;
+  font-family: system-ui;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+h1 {
+  margin: 0 0 1em;
+  color: #345;
+  text-align: center;
+}
+/*Navigation*/
+nav {
+  background: #c52e1d;
+  padding: 1rem;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 1rem;
+  background: #c52e1d;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0 0.4rem;
+  text-align: center;
+}
+nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: block;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: #0d0c1d;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+nav a:hover {
+  color: #343078;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.kitten{
+  background: tomato;
+  padding: 5px;
+  width: 250px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  border: 3px solid black;
+}
+
+a{
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+img{
+  width: 35%;
+  float: left;
+}
