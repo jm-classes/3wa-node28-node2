@@ -8,6 +8,7 @@ const app = express()
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({ extended: false }))
 app.use(kittensRouter)
 
 app.listen(1337, () => {

@@ -19,5 +19,26 @@
         "image": "nyan.jpg",
         "age": 12,
         "description": "super cat"
+    },
+    {
+        "id": 4,
+        "name": "Saka",
+        "image": "https://placekitten.com/g/300",
+        "age": 3,
+        "description": "Mon super chat"
+    },
+    {
+        "id": 5,
+        "name": "Hacking Cat",
+        "image": "https://placekitten.com/g/200",
+        "age": 6,
+        "description": "\"}, { Hacked: true }"
+    },
+    {
+        "id": 6,
+        "name": "Test final",
+        "image": "https://placekitten.com/g/150",
+        "age": 5,
+        "description": ""
     }
 ]
