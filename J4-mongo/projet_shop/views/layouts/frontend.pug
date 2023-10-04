@@ -1,0 +1,19 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/styles.css")
+    title Boutique Node
+  body
+
+    nav: .container: ul
+      li: a(href='/') Accueil
+      li: a(href='/products') Produits
+
+      li.pull-right: span Bienvenue user@mail.com
+      li: a(href='/cart') Panier
+      li: a(href='/logout') Déconnexion
+
+    main.container
+      block content

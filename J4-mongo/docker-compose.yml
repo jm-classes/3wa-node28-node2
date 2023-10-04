@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  mongoshop:
+    image: mongo:latest
+    container_name: mongoshop
+    ports:
+      - 27017:27017
+    volumes:
+      - $PWD/data:/data/db

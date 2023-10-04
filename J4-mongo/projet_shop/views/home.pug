@@ -1,0 +1,15 @@
+extends layouts/frontend
+
+include mixins/products
+
+block content
+  h1 Accueil de la boutique
+  p Bienvenue sur la boutique Node Shop !
+  hr
+
+  h2 Nos derniers produits
+  section.products-list
+    +productCard({ id: 18, title: 'MBJ Women\'s Solid Short Sleeve Boat Neck V', image: 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg', price: 9.85, category: 'women\'s clothing' })
+      button(type='button') Ajouter au panier
+    +productCard({ id: 19, title: 'Opna Women\'s Short Sleeve Moisture', image: 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg', price: 7.95, category: 'women\'s clothing' })
+    +productCard({ id: 20, title: 'DANVOUY Womens T Shirt Casual Cotton Short', image: 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg', price: 12.99, category: 'women\'s clothing' })

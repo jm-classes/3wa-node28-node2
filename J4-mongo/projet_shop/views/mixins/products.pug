@@ -1,0 +1,7 @@
+mixin productCard(p)
+  article(id=`p_${p.id}`).product-item
+    img(src=p.image, alt=p.title)
+    h1= p.title
+    p #{p.price}€
+    p= p.category
+    block
