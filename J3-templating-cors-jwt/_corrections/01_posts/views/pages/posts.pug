@@ -1,0 +1,9 @@
+extends ../layouts/frontend
+
+block content
+  h1 Posts
+
+  each post in posts
+    .ui.container
+      h3= post.title
+      time= post.date
