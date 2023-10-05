@@ -1,0 +1,12 @@
+extends layouts/frontend
+
+block content
+  h1 Authentification
+  p Pour utiliser ce service, vous devez renseigner votre adresse email SVP !
+  hr
+
+  form(method='post', action='/login')
+    label Votre email :
+    input(type='email', required, name='email')
+    div
+      button(type='submit') Envoyer

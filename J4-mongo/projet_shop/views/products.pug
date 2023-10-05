@@ -3,11 +3,10 @@ extends layouts/frontend
 include mixins/products
 
 block content
-  h1 Accueil de la boutique
-  p Bienvenue sur la boutique Node Shop !
+  h1 Liste des produits
+  p Retrouvez ici tous nos produits
   hr
 
-  h2 Nos derniers produits
   section.products-list
     each product in products
       +productCard(product)

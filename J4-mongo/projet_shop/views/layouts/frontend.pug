@@ -9,11 +9,12 @@ html(lang="fr")
 
     nav: .container: ul
       li: a(href='/') Accueil
-      li: a(href='/products') Produits
 
-      li.pull-right: span Bienvenue user@mail.com
-      li: a(href='/cart') Panier
-      li: a(href='/logout') Déconnexion
+      if user !== null
+        li: a(href='/products') Produits
+        li.pull-right: span Bienvenue #{user.email}
+        li: a(href='/cart') Panier
+        li: a(href='/logout') Déconnexion
 
     main.container
       block content
