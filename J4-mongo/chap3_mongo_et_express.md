@@ -22,16 +22,9 @@ On installe mongoose simplement via NPM :
 npm install mongoose
 ```
 
-Dans le fichier `app.js`, nous allons tout d'abord nous connecter à la base de données `kittens`, notez que celle-ci se créera automatiquement dans MongoDB si elle n'existe pas.
-
-Dans un fichier à la racine du projet créer un fichier `.env` dans lequel vous définissez la chaîne de connexion :
-
-N'oubliez pas d'installer également **express**.
-
-Créez maintenant un fichier `server.js` à la racine du projet, écrivez :
+On l'initialise comme ceci :
 
 ```js
-import express from 'express';
 import mongoose from 'mongoose';
 
 try {
