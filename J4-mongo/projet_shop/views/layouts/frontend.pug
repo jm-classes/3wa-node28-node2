@@ -13,7 +13,7 @@ html(lang="fr")
       if user !== null
         li: a(href='/products') Produits
         li.pull-right: span Bienvenue #{user.email}
-        li: a(href='/cart') Panier
+        li: a(href='/basket') Panier (#{user.basket.length})
         li: a(href='/logout') Déconnexion
 
     main.container

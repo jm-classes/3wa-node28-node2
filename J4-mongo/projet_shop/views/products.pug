@@ -10,3 +10,4 @@ block content
   section.products-list
     each product in products
       +productCard(product)
+        a.button(href=`/basket/add/${product._id}`) Ajout au panier

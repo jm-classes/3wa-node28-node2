@@ -1,0 +1,15 @@
+extends layouts/frontend
+
+include mixins/products
+
+block content
+  h1 Contenu de votre panier :
+  hr
+
+  if basketItems.length === 0
+    p Aucun produit pour l'instant
+  else
+    section.products-list
+      each product in basketItems
+        +productCard(product)
+          a.button(href=`/basket/remove/${product._id}`) Retirer du panier

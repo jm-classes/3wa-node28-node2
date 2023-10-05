@@ -10,8 +10,9 @@ img {
   max-width: 100%;
 }
 
-button {
+button, .button {
   background-color: #5669a9;
+  text-decoration: none;
   color: white;
   padding: 0.5rem 1rem;
   transition: all 300ms;
