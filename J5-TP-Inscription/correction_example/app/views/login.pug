@@ -1,0 +1,17 @@
+extends layouts/frontend
+
+include mixins
+
+block content
+    .ui.middle.aligned.center.aligned.grid
+        .six.wide.column
+            h1 Connexion
+
+            if errorMessage
+                .ui.error.message!= errorMessage
+            
+            form.ui.large.form(method="post", action="/login")
+                .ui.stacked.segment
+                    +field('email', 'email', 'your.email@address.tld', values && values.email)
+                    +field('password', 'password', 'Password', values && values.password)
+                    button(type="submit").ui.fluid.large.teal.submit.button Connexion

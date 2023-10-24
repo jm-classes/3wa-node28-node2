@@ -1,0 +1,10 @@
+extends layouts/frontend
+
+include mixins
+
+block content
+    .ui.middle.aligned.center.aligned.grid
+        .six.wide.column
+            h1 Dashboard
+
+            p Bienvenue sur votre dashboard personnel #{loggedUser.firstName} #{loggedUser.lastName} !

@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  mongo_dashboard:
+    container_name: docker_mongo_dashboard
+    image: mongo
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+
+  node_dashboard:
+    container_name: docker_node_dashboard
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+    depends_on: 
+      - mongo_dashboard
+    volumes: 
+      - /app/node_modules
+      - $PWD/app:/app
+    ports: 
+      - "8000:8000"

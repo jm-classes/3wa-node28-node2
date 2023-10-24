@@ -1,0 +1,5 @@
+mixin field(type, name, placeholder, value)
+    .field
+        .ui.left.icon.input
+            i.icon(class=(type === 'password' ? 'lock' : 'user'))
+            input(type=type, name=name, placeholder=placeholder, value=value)

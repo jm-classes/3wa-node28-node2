@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="//unpkg.com/semantic-ui@2.4.2/dist/semantic.min.css")
+        link(rel="stylesheet", href="/css/styles.css")
+        script(src="//unpkg.com/jquery@3.1.1/dist/jquery.min.js")
+        script(src="//unpkg.com/semantic-ui@2.4.2/dist/semantic.min.js")
+        block scripts
+
+        title Hello Express Pug App!
+    body
+
+        .ui.inverted.menu
+            .right.menu
+                if loggedUser
+                    a.item(href="/dashboard", class=(currentRoute === "/dashboard" ? "active" : ""))
+                        i.user.icon
+                        | #{loggedUser.firstName} #{loggedUser.lastName}
+                    a.item(href="/logout")
+                        i.file.icon
+                        | Déconnexion
+                else
+                    a.item(href="/", class=(currentRoute === "/" ? "active" : ""))
+                        i.home.icon
+                        | Inscription
+                    a.item(href="/login", class=(currentRoute === "/login" ? "active" : ""))
+                        i.file.icon
+                        | Connexion
+
+        if flash.success && flash.success.length > 0
+            .ui.middle.aligned.center.aligned.grid: .six.wide.column: .ui.success.message
+                each success in flash.success
+                    p!= success
+        else if flash.error && flash.error.length > 0
+            .ui.middle.aligned.center.aligned.grid: .six.wide.column: .ui.error.message
+                each error in flash.error
+                    p!= error
+
+        block content

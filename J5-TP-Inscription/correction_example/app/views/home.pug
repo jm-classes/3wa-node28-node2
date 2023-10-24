@@ -1,0 +1,20 @@
+extends layouts/frontend
+
+include mixins
+
+block content
+    .ui.middle.aligned.center.aligned.grid
+        .six.wide.column
+            h1 Inscription
+
+            if errorMessage
+                .ui.error.message!= errorMessage
+            
+            form.ui.large.form(method="post", action="/")
+                .ui.stacked.segment
+                    +field('text', 'firstName', 'First name', values && values.firstName)
+                    +field('text', 'lastName', 'Last name', values && values.lastName)
+                    +field('email', 'email', 'your.email@address.tld', values && values.email)
+                    +field('password', 'password', 'Password', values && values.password)
+                    +field('password', 'passwordConfirm', 'Confirm password', values && values.passwordConfirm)
+                    button(type="submit").ui.fluid.large.teal.submit.button Inscription
